@@ -1,10 +1,10 @@
 {
-  "/api": {
+  "/cryptocurrency/listings/latest": {
     "target": "https://pro-api.coinmarketcap.com/v1",
     "secure": true,
     "changeOrigin": true,
     "pathRewrite": {
-      "^/api": ""
+      "^cryptocurrency/listings/latest": ""
     }
   }
 }

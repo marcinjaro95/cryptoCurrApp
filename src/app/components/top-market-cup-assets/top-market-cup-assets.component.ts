@@ -18,7 +18,7 @@ export class TopMarketCupAssetsComponent implements AfterViewInit, OnInit {
   private metaData: MetaData[] = [];
   dataSource = new MatTableDataSource<MetaData>();
   private symbols: MetaData[] = [];
-  private assets: AssetsData = [];
+  private assets: AssetsData[] = [];
 
   constructor(public assetsService: AssetsService) {
   }
@@ -31,7 +31,6 @@ export class TopMarketCupAssetsComponent implements AfterViewInit, OnInit {
 
   ngOnInit() {
     this.assetsService.getAssets().subscribe(assets => {
-      this.assets = assets;
       this.dataSource.data = this.assets;
       console.log(this.assets);
     });

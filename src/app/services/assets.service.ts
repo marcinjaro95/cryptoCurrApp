@@ -19,7 +19,7 @@ export class AssetsService {
 
   getAssets(): Observable<AssetsData> {
     return this.http.get(this.url, {
-      headers: new HttpHeaders({'X-CMC_PRO_API_KEY': environment.apiKey, 'Access-Control-Allow-Origin': 'http://localhost:4200'})
+      headers: new HttpHeaders({'X-CMC_PRO_API_KEY': environment.apiKey, 'Access-Control-Allow-Origin': '*'})
     }).pipe(map(assets => assets['data']));
   }
 }
